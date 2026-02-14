@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💍 Навсегда вместе</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-final">
+    <div class="hearts-bg massive">
+        <div class="heart-fall" style="--i:0">💕</div>
+        <div class="heart-fall" style="--i:1">❤️</div>
+        <div class="heart-fall" style="--i:2">💖</div>
+        <div class="heart-fall" style="--i:3">💗</div>
+        <div class="heart-fall" style="--i:4">💝</div>
+        <div class="heart-fall" style="--i:5">❤️</div>
+        <div class="heart-fall" style="--i:6">💕</div>
+        <div class="heart-fall" style="--i:7">💖</div>
+        <div class="heart-fall" style="--i:8">💗</div>
+        <div class="heart-fall" style="--i:9">💝</div>
+        <div class="heart-fall" style="--i:10">🌹</div>
+        <div class="heart-fall" style="--i:11">💋</div>
+        <div class="heart-fall" style="--i:12">💖</div>
+        <div class="heart-fall" style="--i:13">💗</div>
+        <div class="heart-fall" style="--i:14">💝</div>
+        <div class="heart-fall" style="--i:15">❤️</div>
+        <div class="heart-fall" style="--i:16">💕</div>
+        <div class="heart-fall" style="--i:17">🌹</div>
+        <div class="heart-fall" style="--i:18">💋</div>
+        <div class="heart-fall" style="--i:19">💖</div>
+    </div>
+
+    <nav class="nav">
+        <a href="index.html" class="nav-link">🏠 Главная</a>
+        <a href="love-letter.html" class="nav-link">💌 Письмо</a>
+        <a href="memories.html" class="nav-link">📸 Моменты</a>
+        <a href="reasons.html" class="nav-link">💕 Причины</a>
+        <a href="wish.html" class="nav-link">🌹 Пожелание</a>
+        <a href="final.html" class="nav-link active">💍 Финал</a>
+    </nav>
+
+    <main class="main-content final-content">
+        <div class="final-container">
+            <div class="firework" style="--fw-x: 20%; --fw-delay: 0s"></div>
+            <div class="firework" style="--fw-x: 50%; --fw-delay: 0.5s"></div>
+            <div class="firework" style="--fw-x: 80%; --fw-delay: 1s"></div>
+            <div class="firework" style="--fw-x: 35%; --fw-delay: 1.5s"></div>
+            <div class="firework" style="--fw-x: 65%; --fw-delay: 2s"></div>
+
+            <div class="double-heart">
+                <div class="heart-half left-heart"></div>
+                <div class="heart-half right-heart"></div>
+            </div>
+
+            <h1 class="final-title glow-text">Я люблю тебя! ❤️</h1>
+            
+            <div class="final-message fade-in">
+                <p>Ты — самый важный человек в моей жизни.</p>
+                <p>Каждый день с тобой — это чудо.</p>
+                <p>Я обещаю любить тебя, заботиться о тебе</p>
+                <p>и делать тебя счастливым(ой).</p>
+                <p class="forever">Сегодня. Завтра. Всегда. 💍</p>
+            </div>
+
+            <div class="love-counter">
+                <div class="counter-label">Моя любовь к тебе:</div>
+                <div class="counter-value" id="loveCounter">∞</div>
+                <div class="counter-unit">и это лишь начало... 💝</div>
+            </div>
+
+            <div class="final-buttons">
+                <button class="btn-love big-btn" id="kissBtn">
+                    Поцелуй 💋
+                </button>
+                <button class="btn-love big-btn" id="hugBtn">
+                    Обнимашки 🤗
+                </button>
+                <button class="btn-love big-btn" id="heartBtn">
+                    Ещё сердечек! ❤️
+                </button>
+            </div>
+
+            <div class="reaction-area" id="reactionArea"></div>
+
+            <div class="final-footer">
+                <p class="glow-text">С любовью, навсегда твой(я) 💝</p>
+                <div class="infinity-symbol">∞</div>
+            </div>
+        </div>
+
+        <div class="page-nav">
+            <a href="wish.html" class="btn-love small">← Назад</a>
+            <a href="index.html" class="btn-love small">🏠 В начало</a>
+        </div>
+    </main>
+
+    <script>
+        // Кнопка поцелуй
+        document.getElementById('kissBtn').addEventListener('click', function() {
+            createEmojiBurst(['💋', '😘', '💕', '❤️', '💗'], 15);
+        });
+
+        // Кнопка обнимашки
+        document.getElementById('hugBtn').addEventListener('click', function() {
+            createEmojiBurst(['🤗', '🫂', '💕', '💖', '🥰'], 15);
+        });
+
+        // Кнопка сердечек
+        document.getElementById('heartBtn').addEventListener('click', function() {
+            createEmojiBurst(['❤️', '💕', '💖', '💗', '💝', '💓', '💞', '💘'], 25);
+        });
+
+        function createEmojiBurst(emojis, count) {
+            const area = document.getElementById('reactionArea');
+            for (let i = 0; i < count; i++) {
+                const emoji = document.createElement('span');
+                emoji.className = 'burst-emoji';
+                emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                emoji.style.left = Math.random() * 100 + '%';
+                emoji.style.animationDelay = Math.random() * 0.5 + 's';
+                emoji.style.fontSize = (Math.random() * 30 + 20) + 'px';
+                area.appendChild(emoji);
+
+                setTimeout(() => emoji.remove(), 3000);
+            }
+        }
+
+        // Анимация счётчика
+        let count = 0;
+        const counter = document.getElementById('loveCounter');
+        const interval = setInterval(() => {
+            count += Math.floor(Math.random() * 1000) + 500;
+            if (count > 999999) {
+                counter.textContent = '∞';
+                clearInterval(interval);
+            } else {
+                counter.textContent = count.toLocaleString();
+            }
+        }, 100);
+    </script>
+</body>
+</html>
