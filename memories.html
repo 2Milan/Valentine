@@ -1,1 +1,98 @@
-<!DOCTYPE html> <html lang="ru"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>📸 Наши моменты</title> <link rel="stylesheet" href="style.css"> </head> <body class="page-memories"> <div class="hearts-bg"> <div class="heart-fall" style="--i:0">💕</div> <div class="heart-fall" style="--i:1">❤️</div> <div class="heart-fall" style="--i:2">💖</div> <div class="heart-fall" style="--i:3">💗</div> <div class="heart-fall" style="--i:4">💝</div> </div> <nav class="nav"> <a href="index.html" class="nav-link">🏠 Главная</a> <a href="love-letter.html" class="nav-link">💌 Письмо</a> <a href="memories.html" class="nav-link active">📸 Моменты</a> <a href="reasons.html" class="nav-link">💕 Причины</a> <a href="wish.html" class="nav-link">🌹 Пожелание</a> <a href="final.html" class="nav-link">💍 Финал</a> </nav> <main class="main-content"> <h2 class="section-title fade-in">📸 Наши особенные моменты</h2> <p class="section-subtitle fade-in">Каждый миг с тобой — сокровище</p> <div class="timeline"> <div class="timeline-item left fade-in-left"> <div class="timeline-card"> <div class="timeline-emoji">🌅</div> <h3>Первая встреча</h3> <p>Тот момент, когда наши глаза встретились, и мир остановился. Я знал(а), что ты — особенный человек.</p> <div class="timeline-hearts">💕💕💕</div> </div> </div> <div class="timeline-item right fade-in-right"> <div class="timeline-card"> <div class="timeline-emoji">☕</div> <h3>Первое свидание</h3> <p>Нервы, волнение, и бесконечный разговор обо всём на свете. Кофе остыл, но сердце горело.</p> <div class="timeline-hearts">💕💕💕</div> </div> </div> <div class="timeline-item left fade-in-left"> <div class="timeline-card"> <div class="timeline-emoji">🎆</div> <h3>Первый поцелуй</h3> <p>Время замерло. Весь мир исчез. Остались только мы двое, и этот момент навсегда в моём сердце.</p> <div class="timeline-hearts">💕💕💕</div> </div> </div> <div class="timeline-item right fade-in-right"> <div class="timeline-card"> <div class="timeline-emoji">🌙</div> <h3>Ночные разговоры</h3> <p>Бессонные ночи, когда мы говорили до рассвета. О мечтах, страхах, надеждах — обо всём.</p> <div class="timeline-hearts">💕💕💕</div> </div> </div> <div class="timeline-item left fade-in-left"> <div class="timeline-card"> <div class="timeline-emoji">🎄</div> <h3>Праздники вместе</h3> <p>Каждый праздник с тобой превращается в волшебную сказку. Ты — мой лучший подарок.</p> <div class="timeline-hearts">💕💕💕</div> </div> </div> <div class="timeline-item right fade-in-right"> <div class="timeline-card"> <div class="timeline-emoji">💝</div> <h3>Сегодня</h3> <p>И вот мы здесь. Вместе. Счастливы. И впереди у нас — целая жизнь, полная любви.</p> <div class="timeline-hearts">💕💕💕💕💕</div> </div> </div> </div> <div class="page-nav"> <a href="love-letter.html" class="btn-love small">← Назад</a> <a href="reasons.html" class="btn-love small pulse">Далее →</a> </div> </main> <script> // Анимация при скролле const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); } }); }, { threshold: 0.1 }); document.querySelectorAll('.fade-in-left, .fade-in-right, .fade-in').forEach(el => { observer.observe(el); }); </script> </body> </html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📸 Наши моменты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-memories">
+    <div class="hearts-bg">
+        <div class="heart-fall" style="--i:0">💕</div>
+        <div class="heart-fall" style="--i:1">❤️</div>
+        <div class="heart-fall" style="--i:2">💖</div>
+        <div class="heart-fall" style="--i:3">💗</div>
+        <div class="heart-fall" style="--i:4">💝</div>
+    </div>
+    <nav class="nav">
+        <a href="index.html" class="nav-link">🏠 Главная</a>
+        <a href="love-letter.html" class="nav-link">💌 Письмо</a>
+        <a href="memories.html" class="nav-link active">📸 Моменты</a>
+        <a href="reasons.html" class="nav-link">💕 Причины</a>
+        <a href="wish.html" class="nav-link">🌹 Пожелание</a>
+        <a href="final.html" class="nav-link">💍 Финал</a>
+    </nav>
+    <main class="main-content">
+        <h2 class="section-title fade-in">📸 Наши особенные моменты</h2>
+        <p class="section-subtitle fade-in">Каждый миг с тобой — сокровище</p>
+        <div class="timeline">
+            <div class="timeline-item left fade-in-left">
+                <div class="timeline-card">
+                    <div class="timeline-emoji">🌅</div>
+                    <h3>Первая встреча</h3>
+                    <p>Тот момент, когда наши глаза встретились, и мир остановился. Я знал(а), что ты — особенный человек.</p>
+                    <div class="timeline-hearts">💕💕💕</div>
+                </div>
+            </div>
+            <div class="timeline-item right fade-in-right">
+                <div class="timeline-card">
+                    <div class="timeline-emoji">☕</div>
+                    <h3>Первое свидание</h3>
+                    <p>Нервы, волнение, и бесконечный разговор обо всём на свете. Кофе остыл, но сердце горело.</p>
+                    <div class="timeline-hearts">💕💕💕</div>
+                </div>
+            </div>
+            <div class="timeline-item left fade-in-left">
+                <div class="timeline-card">
+                    <div class="timeline-emoji">🎆</div>
+                    <h3>Первый поцелуй</h3>
+                    <p>Время замерло. Весь мир исчез. Остались только мы двое, и этот момент навсегда в моём сердце.</p>
+                    <div class="timeline-hearts">💕💕💕</div>
+                </div>
+            </div>
+            <div class="timeline-item right fade-in-right">
+                <div class="timeline-card">
+                    <div class="timeline-emoji">🌙</div>
+                    <h3>Ночные разговоры</h3>
+                    <p>Бессонные ночи, когда мы говорили до рассвета. О мечтах, страхах, надеждах — обо всём.</p>
+                    <div class="timeline-hearts">💕💕💕</div>
+                </div>
+            </div>
+            <div class="timeline-item left fade-in-left">
+                <div class="timeline-card">
+                    <div class="timeline-emoji">🎄</div>
+                    <h3>Праздники вместе</h3>
+                    <p>Каждый праздник с тобой превращается в волшебную сказку. Ты — мой лучший подарок.</p>
+                    <div class="timeline-hearts">💕💕💕</div>
+                </div>
+            </div>
+            <div class="timeline-item right fade-in-right">
+                <div class="timeline-card">
+                    <div class="timeline-emoji">💝</div>
+                    <h3>Сегодня</h3>
+                    <p>И вот мы здесь. Вместе. Счастливы. И впереди у нас — целая жизнь, полная любви.</p>
+                    <div class="timeline-hearts">💕💕💕💕💕</div>
+                </div>
+            </div>
+        </div>
+        <div class="page-nav">
+            <a href="love-letter.html" class="btn-love small">← Назад</a>
+            <a href="reasons.html" class="btn-love small pulse">Далее →</a>
+        </div>
+    </main>
+    <script>
+        // Анимация при скролле
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in-left, .fade-in-right, .fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
